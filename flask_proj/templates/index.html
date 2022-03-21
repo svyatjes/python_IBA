@@ -1,0 +1,12 @@
+{% if data.is_authenticated %}
+<h1>Endpoints:</h1>
+- <a href="/list/minsk">/list/minsk</a>
+<br>
+- <a href="/minsk/{{data.date}}">/minsk/{{date}}</a>
+<br>
+- <a href="/about">/about</a>
+<br>
+- <a href="/useragent">/useragent</a>
+{% else %}
+<a class="button" href="/login">Google Login</a>
+{% endif %}

@@ -1,0 +1,13 @@
+<title>{{inf.city}} {{inf.date}}</title>
+
+<h1>forecast for {{inf.city}} on {{inf.date}}:</h1>
+
+{% if forecast %}
+    {% for i in forecast %}
+        <h3>{{i.time}} {{i.temp}} {{i.description}}</h3>
+    {% endfor %}
+{% elif not inf.city_status%} 
+    <h2>city <u>{{inf.city}}</u> not found</h2>    
+{% else%}
+    <h2>no forecast on <u>{{inf.date}}</u></h2>
+{% endif %}

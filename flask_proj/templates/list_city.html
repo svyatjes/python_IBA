@@ -1,0 +1,11 @@
+<title>{{city}} next 5 days</title>
+
+<h1>forecast for several days in {{city}}:</h1>
+
+{% if forecast %}
+    {% for i in forecast %}
+    <h3>{{i.date}} {{i.temp}} {{i.description}}</h3>
+    {% endfor %}
+{% else %}
+    <h2>city <u>{{city}}</u> not found</h2>
+{% endif %}
